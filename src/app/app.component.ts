@@ -6,6 +6,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AboutComponent } from './Common/default/about.component';
 import { CommonModule } from '@angular/common';
 import { ReversePipe } from './Pipe-template/reverse.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { ReversePipe } from './Pipe-template/reverse.pipe';
     // AboutComponent,
     CommonModule,
     // ReversePipe,
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -43,4 +45,5 @@ export class AppComponent {
   UpdateTitle(event: any) {
     this.title = event.target.value;
   }
+  // Two-way binding
 }

@@ -52,10 +52,20 @@
 <input type="checkbox" [checked]="isDisabled" />
 <!-- using interpolation what ever value compes from  the component cosidered as true -->
 <input type="checkbox" checked="{{ isDisabled }}" />
+<br />
 <!-- <input [value]="value" /> -->
-<input (keyup)="UpdateTitle($event)" />
+<input
+  (keyup)="UpdateTitle($event)"
+  placeholder="I am using event binding method..."
+/>
+<br />
 
 <!-- Event Binding -->
 <!-- It is very simple  just specify the event type and call the function name -->
 <button (click)="ChangeName()">Click Me</button>
 <!-- <button (click)="ChangeName($event)">Click Me</button> -->
+<br />
+
+<!-- Two way binding -->
+<!--  The ngModel implement  form controll functions  -->
+<input type="text" [(ngModel)]="name" placeholder="i am using ngModel.." />
