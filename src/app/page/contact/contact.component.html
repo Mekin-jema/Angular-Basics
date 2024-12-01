@@ -1,0 +1,64 @@
+<div class="contact-container">
+  <h1>Contact Us</h1>
+  <p>
+    We'd love to hear from you. Please fill out the form below to get in touch.
+  </p>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        [(ngModel)]="contactData.name"
+        required
+      />
+      <div
+        *ngIf="contactForm.submitted && !contactForm.controls['name']?.valid"
+        class="error"
+      >
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        [(ngModel)]="contactData.email"
+        required
+        email
+      />
+      <div
+        *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid"
+        class="error"
+      >
+        Valid email is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        class="form-control"
+        rows="5"
+        [(ngModel)]="contactData.message"
+        required
+      ></textarea>
+      <div
+        *ngIf="contactForm.submitted && !contactForm.controls['message']?.valid"
+        class="error"
+      >
+        Message is required.
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit">Send</button>
+  </form>
+</div>
