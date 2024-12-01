@@ -32,6 +32,7 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-button>{{ name | uppercase }}</button>
+    <button mat-button>{{ title | lowercase }}</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
@@ -51,4 +52,10 @@
 <input type="checkbox" [checked]="isDisabled" />
 <!-- using interpolation what ever value compes from  the component cosidered as true -->
 <input type="checkbox" checked="{{ isDisabled }}" />
-<input [value]="value" />
+<!-- <input [value]="value" /> -->
+<input (keyup)="UpdateTitle($event)" />
+
+<!-- Event Binding -->
+<!-- It is very simple  just specify the event type and call the function name -->
+<button (click)="ChangeName()">Click Me</button>
+<!-- <button (click)="ChangeName($event)">Click Me</button> -->

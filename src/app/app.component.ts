@@ -36,4 +36,11 @@ export class AppComponent {
   //Property binding
   isDisabled = false;
   value = 100;
+  // Event binding
+  ChangeName() {
+    this.name = 'Mekin Jemal Mohammded';
+  }
+  UpdateTitle(event: any) {
+    this.title = event.target.value;
+  }
 }
