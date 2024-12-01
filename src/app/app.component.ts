@@ -3,8 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './Common/about/about.component';
+import { AboutComponent } from './Common/default/about.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +13,6 @@ import { AboutComponent } from './Common/about/about.component';
     MatCardModule,
     MatButtonModule,
     MatProgressBarModule,
-    HomeComponent,
     AboutComponent,
   ],
   templateUrl: './app.component.html',
