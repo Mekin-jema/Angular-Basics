@@ -15,9 +15,9 @@ import { ReversePipe } from './Pipe-template/reverse.pipe';
     MatCardModule,
     MatButtonModule,
     MatProgressBarModule,
-    AboutComponent,
+    // AboutComponent,
     CommonModule,
-    ReversePipe,
+    // ReversePipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -33,4 +33,7 @@ export class AppComponent {
     address: 'Addis Ababa',
     country: 'Ethiopia',
   };
+  //Property binding
+  isDisabled = false;
+  value = 100;
 }

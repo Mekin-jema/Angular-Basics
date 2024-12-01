@@ -35,12 +35,20 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
-<p>Pip basics on default currency:{{ salay | currency }}</p>
+<!-- Pipes -->
+<!-- <p>Pip basics on default currency:{{ salay | currency }}</p>
 <p>Pip basics on currency:{{ salay | currency : "Birr" }}</p>
 <p>Pip basics on number :{{ salay | number }}</p>
-<p>Pip basics on percent:{{ salay | percent }}</p>
+<p>Pip basics on percent:{{ salay | percent }}</p> -->
 <!-- Here guide how to add json pipes -->
-<p>Pip basics on Json:{{ obj | json }}</p>
+<!-- <p>Pip basics on Json:{{ obj | json }}</p> -->
 <!-- creating your own custome pipe and add it to as builting pipe -->
-<p>Pip basics on percent:{{ name | reverse }}</p>
-<app-about></app-about>
+<!-- <p>Pip basics on percent:{{ name | reverse }}</p> -->
+<!-- <app-about></app-about> -->
+
+<!-- Propery Binding -->
+<input type="checkbox" [disabled]="isDisabled" />
+<input type="checkbox" [checked]="isDisabled" />
+<!-- using interpolation what ever value compes from  the component cosidered as true -->
+<input type="checkbox" checked="{{ isDisabled }}" />
+<input [value]="value" />
