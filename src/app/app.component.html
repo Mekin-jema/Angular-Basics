@@ -9,13 +9,14 @@
     background-size: cover;
   }
 </style>
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
 
 <mat-card class="example-card" appearance="outlined">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Shiba Inu</mat-card-title>
     <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <p>it is now {{ today | date : "dd/mm/yyyy" }}</p>
   </mat-card-header>
   <img
     mat-card-image
@@ -30,9 +31,16 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>{{ name }}</button>
+    <button mat-button>{{ name | uppercase }}</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<p>Pip basics on default currency:{{ salay | currency }}</p>
+<p>Pip basics on currency:{{ salay | currency : "Birr" }}</p>
+<p>Pip basics on number :{{ salay | number }}</p>
+<p>Pip basics on percent:{{ salay | percent }}</p>
+<!-- Here guide how to add json pipes -->
+<p>Pip basics on Json:{{ obj | json }}</p>
+<!-- creating your own custome pipe and add it to as builting pipe -->
+<p>Pip basics on percent:{{ name | reverse }}</p>
 <app-about></app-about>
